@@ -1,0 +1,28 @@
+<!--pages/huodong/huodong.wxml-->
+<view class="body" style="height:{{height}}">
+    <view class="head" style="width:{{width}}">
+        <image src="{{avater}}"></image>
+        <text>{{nickname}}</text>
+    </view>
+    <view class="nav">
+        全部已经报名的活动
+    </view>
+    <view class="huodong" wx:for="{{lists}}" wx:key="item" wx:if="{{lists.length!=0}}">
+        <!--<navigator url="../show/show?id={{item.id}}">-->
+        <view bindtap="navigator" id='{{item.id}}'>
+            <view class="huodongBox">
+                <image src="{{item.imageUrl[0]}}"></image>
+                <view class="title">{{item.title}}</view>
+                <view class="date">{{item.date}}</view>
+                <view class="price">{{item.price}}元/人</view>
+                <view class="status-active" wx:if="{{item.isHide=='false'}}">即将进行！</view>
+                <view class="status-danger" wx:if="{{item.isHide=='true'}}">活动已结束！</view>
+            </view>
+            </view>
+        <!--</navigator>-->
+    </view>
+    <view class="not" wx:if="{{lists.length==0}}">
+        暂时无法查询到你的活动记录！
+    </view>
+</view>
+

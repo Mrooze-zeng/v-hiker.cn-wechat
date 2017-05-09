@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/show/show",
+    "pages/join/join",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/huodong/huodong",
+    "pages/about/about",
+    "pages/xieyi/xieyi"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广州驴行天下户外俱乐部",
+    "navigationBarTextStyle":"black",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh":"false",
+    "backgroundColor":"#ececec"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "主页",
+      "iconPath":"icon/home.png",
+      "selectedIconPath":"icon/homeh.png"
+    },{
+      "pagePath":"pages/login/login",
+      "text":"个人中心",
+      "iconPath":"icon/personal.png",
+      "selectedIconPath":"icon/personalh.png"
+    }],
+    "color":"#aaa",
+    "selectedColor":"#353535",
+    "backgroundColor":"#fff",
+    "borderStyle":"white"
+  }
+}

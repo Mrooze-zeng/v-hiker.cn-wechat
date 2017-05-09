@@ -1,0 +1,35 @@
+<!--pages/join/join.wxml-->
+<view class="huodong" bindtap="back">
+    <image src="{{list.imageUrl[0]}}" class="image"></image>
+    <view class="title">{{list.title}}</view>
+    <view class="time">
+    <image src="../../icon/riqi.svg" class="myIcons my"></image>
+    时间：{{list.date}}</view>
+    <view class="price">{{list.price}}元/人</view>
+    <view class="jihe">
+    <image src="../../icon/jihe.svg" class="myIcons my"></image>
+    出发地点：广州地铁五号线猎德站A出口</view>
+    <view class="place">
+    <image src="../../icon/mudi.svg" class="myIcons my"></image>
+    目的地：<text>{{list.dest}}</text></view>
+</view>
+<view class="xinxi">信息填写:</view>
+<view class="section" style="height:{{height}};width:{{width}}">
+    <form  bindsubmit="formSubmit">
+        <label style="width:{{minwidth}}">网名：<input type="text" value="{{userInfo.nickName}}" disabled='true' name="nickName"/></label>        
+        <label style="width:{{minwidth}}">真实姓名：<input type="text" placeholder="真实姓名"  name="name" value="{{mine.name}}" confirm-type='next' confirm-hold='true'/></label>
+        <label style="width:{{minwidth}}">身份证号：<input type="idcard" placeholder="身份证号" name="idcard" maxlength="18" value="{{mine.idcard}}" confirm-type='next' confirm-hold='true'/></label>
+        <label style="width:{{minwidth}}">手机号码：<input type="number" placeholder="手机号码" maxlength='11' name='phone' value="{{mine.phone}}"  confirm-type='next' confirm-hold='true'/></label>
+        <label style="width:{{minwidth}}">紧急联系人：<input type="text" placeholder="紧急联系人" name='lianxi' value="{{mine.lianxi}}" confirm-type='next' confirm-hold='true'/></label>
+        <label style="width:{{minwidth}}">紧急联系人电话：<input type="number" placeholder="紧急联系人电话" maxlength="11" name='lianxiphone' value="{{mine.lianxiphone}}" confirm-type='done' confirm-hold='false'/></label>
+        <!--<view bindtap="show">+</view>-->
+
+        <checkbox-group bindchange="show">
+            <label class="checkbox" >
+                <checkbox value="xieyi" /> <navigator url="../xieyi/xieyi">我已经阅读并接受《XX协议》</navigator>
+            </label>
+        </checkbox-group>
+        <label><view class="money" style="color:#ef6809;width:{{minwidth}}">需付金额：{{list.price}}</view></label>
+        <button type="primary" size="default" formType="submit" disabled="{{isshow}}"> 确定并支付 </button>
+    </form>
+</view>

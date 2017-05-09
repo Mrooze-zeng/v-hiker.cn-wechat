@@ -1,0 +1,83 @@
+<!--pages/show/show.wxml-->
+<swiper indicator-dots='{{indicator}}'
+  autoplay="true" interval="5000" duration="1000">
+  <block wx:for="{{lists.imageUrl}}" wx:key="item">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+  </block>
+</swiper>
+<view class="head"> 
+  <view class="title">
+  {{lists.title}}
+  </view>
+  <view class="price" style="margin-left:{{windowWidth-100}}px">
+  {{lists.price}}元/人</view>
+</view>
+<view class="meetting">
+  <image src="../../icon/jihe.svg" class="myIcons my"></image>
+  集合地点：广州市地铁5号线猎德站A出口
+</view>
+<view class="dest">
+  <image src="../../icon/mudi.svg" class="myIcons my"></image>
+  目的地点：{{lists.dest}}
+</view>
+<view class="date">
+<image src="../../icon/riqi.svg" class="myIcons my"></image>
+  出发时间：{{lists.date}}
+</view>
+<view class="joinedNum" wx:if="{{outdate==false}}">
+<image src="../../icon/renshu.svg" class="myIcons my"></image>
+  已报名人数：{{lists.joinedNum}}人
+</view>
+<view class="joinedNum" wx:if="{{outdate==true}}">
+<image src="../../icon/renshu.svg" class="myIcons my"></image>
+  参加人数：{{lists.joinedNum}}人
+</view>
+<view class="dateCount">
+<image src="../../icon/daojishi.svg" class="myIcons my"></image>
+  报名倒计时：<text wx:if="{{time>0}}">{{newDay}}天{{newTime}}小时</text>
+  <text wx:if="{{time<=0}}">报名时间已截止！</text>
+</view>
+<view class="introduce">
+  <view class="list">
+    <view class="{{tap=='a'?'tapped':'untap'}}" bindtap="tapShow" id="a">线路介绍</view>
+    <view class="{{tap=='b'?'tapped':'untap'}}" bindtap="tapShow" id="b">线路行程</view>
+    <view class="{{tap=='c'?'tapped':'untap'}}" bindtap="tapShow" id="c">费用说明</view>
+    <view class="{{tap=='d'?'tapped':'untap'}}" bindtap="tapShow" id="d">更多介绍</view>
+  </view>
+  <view class="showBox">
+    <view class="{{tap=='a'?'on':'off'}}">···线路介绍···</view>
+    <view class="{{tap=='b'?'on':'off'}}">···线路行程···</view>
+    <view class="{{tap=='c'?'on':'off'}}">···费用说明···</view>
+    <view class="{{tap=='d'?'on':'off'}}">···更多介绍···</view>
+    <text class="show">{{text}}</text>
+  </view>
+</view>
+<view class="bottum">Created by Mrooze</view>
+
+<contact-button 
+  type="default-light" 
+  size="27"
+  session-from="weapp"
+  style="top:{{ballTop}}px;left:{{ballLeft}}px;"
+  bindtouchmove="ballMoveEvent"
+>
+</contact-button>
+
+
+<view class="wx-tarbar">
+    <view class="index common" bindtap="forHome">
+        <view >
+        <image src="../../icon/home.png" class="myIcons"></image>
+    首页</view>
+    </view>
+    <view wx:if="{{!outdate}}" class="join common" bindtap="forJoin" style="background:{{color}}">
+       <view  wx:if="{{!isJoin}}" >
+      <image src="../../icon/baoming.svg" class="myIcons"></image>
+      立即报名</view>
+      <view wx:if="{{isJoin}}">
+        <image src="../../icon/baoming.svg" class="myIcons"></image>
+      已报名</view> 
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+<view class="bg" style="height:{{height}}">
+    <text>广州驴行天下户外旅行俱乐部是......</text>
+</view>

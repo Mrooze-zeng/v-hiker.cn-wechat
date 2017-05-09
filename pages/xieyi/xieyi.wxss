@@ -1,0 +1,8 @@
+/* pages/xieyi/xieyi.wxss */
+view {
+    background: #fff;
+    text-align: center;
+    padding-top: 120rpx;
+    padding-bottom: 120rpx;
+    padding: 30px;
+}

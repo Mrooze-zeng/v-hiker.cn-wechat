@@ -1,0 +1,86 @@
+/* pages/huodong/huodong.wxss */
+.head image {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+    margin: 20rpx;
+}
+.head text {
+    font-size: 17pt;
+    position: absolute;
+    top: 40rpx;
+    left: 150rpx;
+}
+.head {
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    z-index: 1000;
+}
+.nav {
+    background: #fff;
+    margin-top: 170rpx;
+    font-size: 16pt;
+    padding: 20rpx;
+    border-bottom: 1px solid #ececec;
+    text-align: center;
+}
+.huodong {
+    background: #fff;
+}
+.huodongBox {
+    z-index: 1;
+    position: relative;
+    border-bottom:  1px solid #ececec;
+}
+.huodongBox image {
+    clear: both;
+    float: left;
+    height: 160rpx;
+    width: 240rpx;
+    padding: 20rpx;
+}
+.huodongBox .title {
+    padding: 20rpx;
+    font-size: 17pt;
+    height: 85rpx;
+    /*word-wrap: break-word; 
+    word-break: normal; 
+    overflow-x: hidden;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.huodongBox .date {
+    padding: 20rpx;
+}
+.huodongBox .price {
+    position:absolute;
+    bottom:0;
+    right:0;
+    color: #ef6809;
+    padding: 20rpx;
+}
+.not {
+    padding:35rpx;
+    text-align:center;
+    font-size:14pt;
+    padding-top:250rpx;
+    height: 60%;
+    background: #fff;
+}
+.status-active {
+    width:120rpx;
+    height:105rpx;
+    border:4rpx solid #09bb07;
+    position:absolute;
+    top:40rpx;
+    right:120rpx;
+    border-radius:60rpx;
+    font-size:12pt;
+    line-height:45rpx;
+    text-align:center;
+    padding-top:15rpx;
+    transform:rotateZ(-45deg);
+}

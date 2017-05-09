@@ -1,0 +1,86 @@
+/* pages/join/join.wxss */
+@import "../mine/mine.wxss";
+.huodong .image {
+    clear: both;
+    float: left;
+    height: 160rpx;
+    width: 240rpx;
+    padding: 20rpx;
+}
+.huodong {
+    z-index: 10000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 6rpx;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+.huodong .title {
+    padding: 20rpx;
+    font-size: 16pt;
+    height: 85rpx;
+    word-wrap: break-word; 
+    word-break: normal; 
+    overflow-x: hidden;
+    /*overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;*/
+}
+.huodong .time,.price {
+    font-size: 12pt;
+    color: #888888;
+    padding: 20rpx;
+}
+.huodong .time { 
+    color: #888888;
+}
+.huodong .price {
+    position:absolute;
+    top:125rpx;
+    right:0;
+    color: #ef6809;
+}
+.huodong .jihe,.place {
+    font-size: 12pt;
+    color: #888888;
+    padding: 20rpx;
+}
+.jihe {
+    border-top: 1px solid #ececec;
+}
+.place text {
+    color: #ef6809;
+}
+.xinxi {
+    margin-top: 376rpx;
+    font-size: 16pt;
+    padding: 20rpx;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+navigator {
+    text-decoration: underline;
+    color: 576b95;
+    text-align: center;
+    display: inline-block;
+}
+.money {
+    text-align: center;
+}
+.my {
+    width: 30rpx!important;
+    height: 30rpx !important;
+}
+/*.section view {
+    width: 60rpx;
+    border-radius: 30rpx;
+    text-align: center;
+    font-size: 16pt;
+    background: #09bb07;
+    position:relative;
+    left:50%;
+    margin-left:-30rpx;
+    margin-top:25rpx;
+
+}*/

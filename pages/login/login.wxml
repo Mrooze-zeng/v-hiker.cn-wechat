@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="bg" bindtouchmove="move" bindtouchstart="start" style="height:{{height}};" animation="{{animationData}}">
+    <image src="./bg.jpg"></image>
+    <button type="primary" size="default" bindtap="login" class="{{isLogin=='true'?'hide':'show'}}"> 微信登录 </button>
+    <view class="{{isLogin=='true'?'show':'hide'}}" style="height:{{height}};">
+        <view class="imageBox" bindtap="mine" id="nickName">
+            <image src="{{userInfo.avatarUrl}}" id="avatar"></image>
+            <view class="nickName">{{userInfo.nickName}}
+                <image src="../../icon/male.svg" class="myIcons my gender " wx:if="{{userInfo.gender==1 }}"></image>
+                <image src="../../icon/female.svg" class="myIcons my gender " wx:else></image>
+            </view>
+            <image src="../../icon/shezhi.svg" class="myIcons my"></image>
+        </view> 
+        <view class="mine" bindtap="mine" id="mine">
+        <image src="../../icon/ziliao.svg" class="myIcons"></image>
+        我的资料</view>
+        <view class="huodong" bindtap="huodong">
+        <image src="../../icon/huodong.svg" class="myIcons"></image>
+        我的活动</view>
+        <view class="about" bindtap="about">
+        <image src="../../icon/guangyu.svg" class="myIcons"></image>
+        关于广州驴行天下户外</view>
+    </view>
+</view>
+

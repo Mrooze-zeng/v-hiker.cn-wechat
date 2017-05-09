@@ -1,0 +1,13 @@
+/* pages/about/about.wxss */
+.bg {
+    background: #fff;
+    width: 100%;
+}
+text {
+    position: absolute;
+    top: 50%;
+    margin-top: -80rpx;
+    padding: 60rpx;
+    text-align: center;
+    font-size: 16pt;
+}

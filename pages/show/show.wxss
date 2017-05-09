@@ -1,0 +1,133 @@
+/* pages/show/show.wxss */
+.head {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    padding: 10rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;  
+    /*height: 130rpx;*/
+}
+.title {
+    font-size: 16pt;
+    font-weight: bold;
+    word-wrap: break-word; 
+    word-break: normal;
+}
+.price {
+    font-size:14pt;
+    color:#ef6809;
+    /*position:relative;*/
+    /*left:50%;
+    bottom:0;*/
+    /*width:250rpx;*/
+    /*margin-left:75rpx;*/
+}
+.meetting,.dest,.date,.dateCount,.joinedNum {
+    background: #fff;
+    font-size: 12pt;
+    padding: 10rpx;
+    border-bottom: 1px solid #ececec;
+}
+.dateCount text {
+    color: #ef6809;
+    margin-left: 120rpx;
+}
+.list {
+    margin-top: 10rpx;
+    background: #fff;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    flex: 4;
+}
+#a,#b,#c,#d{
+    flex: 1;
+    flex-direction: column;
+    font-size: 13pt;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.tapped {
+    color: #000;
+    border-bottom: 2px solid #353535;
+}
+.untap {
+    color: #888;
+    border-bottom: 0 solid transparent;
+}
+.on {
+    display: block;
+    text-align: center;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    color: #576b95;
+    font-size: 16pt;
+}
+.off{
+    display: none;
+}
+.showBox {
+    width: 95%;
+    height: 100%;
+    padding: 20rpx;
+    background: #fff;
+}
+.show {
+
+    font-size: 14pt;
+    line-height: 16pt;
+}
+.bottum {
+    text-align: center;
+    font-size: 12pt;
+    padding: 10rpx;
+    color: #888;
+    margin-bottom: 54px;
+}
+
+.wx-tarbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    flex: 4;
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    background: #fff;
+    font-size: 14pt;
+    border-top: 1px solid #ececec;
+}
+.common {
+    display: inline-block;
+    padding: 24rpx;
+    font: 16pt;
+}
+.index {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+}
+.join {
+    display: flex;
+    flex: 2;
+    align-content: center;
+    justify-content: center;
+    background: #ef6809;
+    color: #fff;
+}
+.contant {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+}
+.my {
+    width: 30rpx;
+    height: 30rpx;
+}
